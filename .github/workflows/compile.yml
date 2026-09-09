@@ -27,9 +27,9 @@ jobs:
 
       - name: Prepare sketch folder
         run: |
-          mkdir -p Three_bank_display_test
-          cp Three_bank_display_test Three_bank_display_test/Three_bank_display_test.ino
+          mkdir -p _ci_sketch/Three_bank_display_test
+          cp Three_bank_display_test _ci_sketch/Three_bank_display_test/Three_bank_display_test.ino
 
       - name: Compile sketch
         run: |
-          arduino-cli compile --fqbn arduino:avr:pro Three_bank_display_test
+          arduino-cli compile --fqbn arduino:avr:pro _ci_sketch/Three_bank_display_test
