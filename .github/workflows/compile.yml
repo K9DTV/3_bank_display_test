@@ -1,0 +1,35 @@
+# Compile Three_bank_display_test for Arduino Pro Mini (ATmega328 @ 16 MHz).
+# Does not upload or run on hardware.
+
+name: Compile
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Arduino CLI
+        uses: arduino/setup-arduino-cli@v2
+
+      - name: Install AVR core
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install arduino:avr
+
+      - name: Prepare sketch folder
+        run: |
+          mkdir -p Three_bank_display_test
+          cp Three_bank_display_test Three_bank_display_test/Three_bank_display_test.ino
+
+      - name: Compile sketch
+        run: |
+          arduino-cli compile --fqbn arduino:avr:pro Three_bank_display_test
