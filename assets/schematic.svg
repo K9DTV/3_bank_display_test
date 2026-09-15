@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 900" width="1120" height="900" role="img" aria-labelledby="t d">
+  <title id="t">3_bank_display_test schematic</title>
+  <desc id="d">US ANSI schematic: one wire per pin from Pro Mini to three PDSP1880 modules. Pot rotated 90 degrees CW.</desc>
+  <defs>
+    <style type="text/css"><![CDATA[
+      .bg{fill:#fff}
+      .ic{fill:#fff;stroke:#111;stroke-width:1.5}
+      .w{fill:none;stroke:#111;stroke-width:1.25;stroke-linecap:square;stroke-linejoin:miter}
+      .wb{fill:none;stroke:#111;stroke-width:2}
+      .dot{fill:#111}
+      .t{fill:#111;font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:12px}
+      .th{fill:#111;font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;font-weight:600}
+      .tr{fill:#111;font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700}
+      .tp{fill:#111;font-family:Consolas,"Courier New",monospace;font-size:10.5px}
+      .tn{fill:#333;font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:10px}
+    ]]></style>
+    <g id="gnd">
+      <path class="w" d="M0,0 v6"/>
+      <path class="w" d="M-10,6 h20"/>
+      <path class="w" d="M-6.5,10 h13"/>
+      <path class="w" d="M-3,14 h6"/>
+    </g>
+    <g id="vplus">
+      <path class="w" d="M0,12 v-12"/>
+      <circle cx="0" cy="-5" r="4.2" fill="none" stroke="#111" stroke-width="1.25"/>
+    </g>
+    <g id="pot">
+      <path class="w" d="M0,0 l5,-7 10,14 10,-14 10,14 10,-14 10,14 5,-7"/>
+      <path class="w" d="M30,20 v-9"/>
+      <path d="M30,11 l-4.5,7 h9 z" fill="#111"/>
+    </g>
+  </defs>
+
+  <rect class="bg" width="1120" height="900"/>
+
+  <text x="20" y="24" class="th">3_bank_display_test schematic</text>
+  <text x="20" y="42" class="tn">US / ANSI-IEEE. One wire per pin. R1 rotated 90 deg CW (CW top, CCW bottom, wiper left).</text>
+
+  <path class="wb" d="M20,60 H860"/>
+  <use href="#vplus" x="36" y="48"/>
+  <text x="48" y="46" class="tp">+5V</text>
+
+  <!-- GND rail: same gap below U1 as +5V is above U1 (U1 top 90 / rail 60 = 30px; U1 bottom 730 -> rail 760) -->
+  <path class="wb" d="M20,760 H860"/>
+  <use href="#gnd" x="36" y="760"/>
+  <text x="52" y="778" class="tp">GND</text>
+
+  <!-- U1 -->
+  <rect class="ic" x="20" y="90" width="160" height="640" rx="3"/>
+  <text x="100" y="112" text-anchor="middle" class="tr">U1</text>
+  <text x="100" y="128" text-anchor="middle" class="t">OSEPP Pro Mini</text>
+  <text x="100" y="144" text-anchor="middle" class="tn">ATmega328P 5V 16MHz</text>
+
+  <g class="tp" text-anchor="end">
+    <text x="168" y="184">D0</text>
+    <text x="168" y="209">D1</text>
+    <text x="168" y="234">D2</text>
+    <text x="168" y="259">D3</text>
+    <text x="168" y="284">D4</text>
+    <text x="168" y="309">D5</text>
+    <text x="168" y="334">D6</text>
+    <text x="168" y="359">D7</text>
+    <text x="168" y="394">D8</text>
+    <text x="168" y="419">D9</text>
+    <text x="168" y="444">D10</text>
+    <text x="168" y="484">D11</text>
+    <text x="168" y="520">D12</text>
+    <text x="168" y="556">D13</text>
+    <text x="168" y="700">A0</text>
+  </g>
+  <g class="tn">
+    <text x="28" y="184">bit0</text>
+    <text x="28" y="209">bit1</text>
+    <text x="28" y="234">bit2</text>
+    <text x="28" y="259">bit3</text>
+    <text x="28" y="284">bit4</text>
+    <text x="28" y="309">bit5</text>
+    <text x="28" y="334">bit6</text>
+    <text x="28" y="359">/WR</text>
+    <text x="28" y="394">disp A0</text>
+    <text x="28" y="419">disp A1</text>
+    <text x="28" y="444">disp A2</text>
+    <text x="28" y="484">CE1</text>
+    <text x="28" y="520">CE2</text>
+    <text x="28" y="556">CE3</text>
+    <text x="28" y="700">pot</text>
+  </g>
+
+  <path class="w" d="M100,90 V60"/>
+  <circle class="dot" cx="100" cy="60" r="2.5"/>
+  <text x="106" y="82" class="tn">VIN</text>
+  <!-- U1 GND: center of box bottom; label above the entry -->
+  <path class="w" d="M100,730 V760"/>
+  <circle class="dot" cx="100" cy="730" r="2.5"/>
+  <circle class="dot" cx="100" cy="760" r="2.5"/>
+  <text x="100" y="718" text-anchor="middle" class="tp">GND</text>
+
+  <!-- stubs -->
+  <path class="w" d="M180,180 H210"/>
+  <path class="w" d="M180,205 H210"/>
+  <path class="w" d="M180,230 H210"/>
+  <path class="w" d="M180,255 H210"/>
+  <path class="w" d="M180,280 H210"/>
+  <path class="w" d="M180,305 H210"/>
+  <path class="w" d="M180,330 H210"/>
+  <path class="w" d="M180,355 H210"/>
+  <path class="w" d="M180,390 H210"/>
+  <path class="w" d="M180,415 H210"/>
+  <path class="w" d="M180,440 H210"/>
+  <path class="w" d="M180,480 H210"/>
+  <path class="w" d="M180,516 H210"/>
+  <path class="w" d="M180,552 H210"/>
+  <path class="w" d="M180,700 H210"/>
+
+  <!-- Titles above packages -->
+  <text x="370" y="168" text-anchor="middle" class="tr">U2</text>
+  <text x="370" y="152" text-anchor="middle" class="t">PDSP1880 #1 left</text>
+  <text x="570" y="168" text-anchor="middle" class="tr">U3</text>
+  <text x="570" y="152" text-anchor="middle" class="t">PDSP1880 #2 mid</text>
+  <text x="770" y="168" text-anchor="middle" class="tr">U4</text>
+  <text x="770" y="152" text-anchor="middle" class="t">PDSP1880 #3 right</text>
+
+  <!-- Packages: left edge pin landings at same Y as U1 nets -->
+  <rect class="ic" x="300" y="175" width="140" height="450" rx="3"/>
+  <rect class="ic" x="500" y="175" width="140" height="450" rx="3"/>
+  <rect class="ic" x="700" y="175" width="140" height="450" rx="3"/>
+
+  <g class="tp">
+    <text x="308" y="184">bit0</text><text x="308" y="209">bit1</text><text x="308" y="234">bit2</text><text x="308" y="259">bit3</text>
+    <text x="308" y="284">bit4</text><text x="308" y="309">bit5</text><text x="308" y="334">bit6</text><text x="308" y="359">/WR</text>
+    <text x="308" y="394">disp A0</text><text x="308" y="419">disp A1</text><text x="308" y="444">disp A2</text><text x="308" y="484">CE</text>
+
+    <text x="508" y="184">bit0</text><text x="508" y="209">bit1</text><text x="508" y="234">bit2</text><text x="508" y="259">bit3</text>
+    <text x="508" y="284">bit4</text><text x="508" y="309">bit5</text><text x="508" y="334">bit6</text><text x="508" y="359">/WR</text>
+    <text x="508" y="394">disp A0</text><text x="508" y="419">disp A1</text><text x="508" y="444">disp A2</text><text x="508" y="484">CE</text>
+
+    <text x="708" y="184">bit0</text><text x="708" y="209">bit1</text><text x="708" y="234">bit2</text><text x="708" y="259">bit3</text>
+    <text x="708" y="284">bit4</text><text x="708" y="309">bit5</text><text x="708" y="334">bit6</text><text x="708" y="359">/WR</text>
+    <text x="708" y="394">disp A0</text><text x="708" y="419">disp A1</text><text x="708" y="444">disp A2</text><text x="708" y="484">CE</text>
+  </g>
+  <!-- VCC under top entry; GND over bottom entry -->
+  <text x="370" y="198" text-anchor="middle" class="tp">VCC</text>
+  <text x="370" y="615" text-anchor="middle" class="tp">GND</text>
+  <text x="570" y="198" text-anchor="middle" class="tp">VCC</text>
+  <text x="570" y="615" text-anchor="middle" class="tp">GND</text>
+  <text x="770" y="198" text-anchor="middle" class="tp">VCC</text>
+  <text x="770" y="615" text-anchor="middle" class="tp">GND</text>
+
+  <!-- Shared nets: ONLY outside U2/U3. No lines through package interiors.
+       U2 box 300-440, U3 500-640, U4 700-840. Segments: U1->U2L, U2R->U3L, U3R->U4L. -->
+  <!-- D0 -->
+  <path class="w" d="M210,180 H300"/><circle class="dot" cx="210" cy="180" r="2.3"/><circle class="dot" cx="300" cy="180" r="2.3"/>
+  <path class="w" d="M440,180 H500"/><circle class="dot" cx="440" cy="180" r="2.3"/><circle class="dot" cx="500" cy="180" r="2.3"/>
+  <path class="w" d="M640,180 H700"/><circle class="dot" cx="640" cy="180" r="2.3"/><circle class="dot" cx="700" cy="180" r="2.3"/>
+  <!-- D1 -->
+  <path class="w" d="M210,205 H300"/><circle class="dot" cx="210" cy="205" r="2.3"/><circle class="dot" cx="300" cy="205" r="2.3"/>
+  <path class="w" d="M440,205 H500"/><circle class="dot" cx="440" cy="205" r="2.3"/><circle class="dot" cx="500" cy="205" r="2.3"/>
+  <path class="w" d="M640,205 H700"/><circle class="dot" cx="640" cy="205" r="2.3"/><circle class="dot" cx="700" cy="205" r="2.3"/>
+  <!-- D2 -->
+  <path class="w" d="M210,230 H300"/><circle class="dot" cx="210" cy="230" r="2.3"/><circle class="dot" cx="300" cy="230" r="2.3"/>
+  <path class="w" d="M440,230 H500"/><circle class="dot" cx="440" cy="230" r="2.3"/><circle class="dot" cx="500" cy="230" r="2.3"/>
+  <path class="w" d="M640,230 H700"/><circle class="dot" cx="640" cy="230" r="2.3"/><circle class="dot" cx="700" cy="230" r="2.3"/>
+  <!-- D3 -->
+  <path class="w" d="M210,255 H300"/><circle class="dot" cx="210" cy="255" r="2.3"/><circle class="dot" cx="300" cy="255" r="2.3"/>
+  <path class="w" d="M440,255 H500"/><circle class="dot" cx="440" cy="255" r="2.3"/><circle class="dot" cx="500" cy="255" r="2.3"/>
+  <path class="w" d="M640,255 H700"/><circle class="dot" cx="640" cy="255" r="2.3"/><circle class="dot" cx="700" cy="255" r="2.3"/>
+  <!-- D4 -->
+  <path class="w" d="M210,280 H300"/><circle class="dot" cx="210" cy="280" r="2.3"/><circle class="dot" cx="300" cy="280" r="2.3"/>
+  <path class="w" d="M440,280 H500"/><circle class="dot" cx="440" cy="280" r="2.3"/><circle class="dot" cx="500" cy="280" r="2.3"/>
+  <path class="w" d="M640,280 H700"/><circle class="dot" cx="640" cy="280" r="2.3"/><circle class="dot" cx="700" cy="280" r="2.3"/>
+  <!-- D5 -->
+  <path class="w" d="M210,305 H300"/><circle class="dot" cx="210" cy="305" r="2.3"/><circle class="dot" cx="300" cy="305" r="2.3"/>
+  <path class="w" d="M440,305 H500"/><circle class="dot" cx="440" cy="305" r="2.3"/><circle class="dot" cx="500" cy="305" r="2.3"/>
+  <path class="w" d="M640,305 H700"/><circle class="dot" cx="640" cy="305" r="2.3"/><circle class="dot" cx="700" cy="305" r="2.3"/>
+  <!-- D6 -->
+  <path class="w" d="M210,330 H300"/><circle class="dot" cx="210" cy="330" r="2.3"/><circle class="dot" cx="300" cy="330" r="2.3"/>
+  <path class="w" d="M440,330 H500"/><circle class="dot" cx="440" cy="330" r="2.3"/><circle class="dot" cx="500" cy="330" r="2.3"/>
+  <path class="w" d="M640,330 H700"/><circle class="dot" cx="640" cy="330" r="2.3"/><circle class="dot" cx="700" cy="330" r="2.3"/>
+  <!-- /WR -->
+  <path class="w" d="M210,355 H300"/><circle class="dot" cx="210" cy="355" r="2.3"/><circle class="dot" cx="300" cy="355" r="2.3"/>
+  <path class="w" d="M440,355 H500"/><circle class="dot" cx="440" cy="355" r="2.3"/><circle class="dot" cx="500" cy="355" r="2.3"/>
+  <path class="w" d="M640,355 H700"/><circle class="dot" cx="640" cy="355" r="2.3"/><circle class="dot" cx="700" cy="355" r="2.3"/>
+  <!-- disp A0 -->
+  <path class="w" d="M210,390 H300"/><circle class="dot" cx="210" cy="390" r="2.3"/><circle class="dot" cx="300" cy="390" r="2.3"/>
+  <path class="w" d="M440,390 H500"/><circle class="dot" cx="440" cy="390" r="2.3"/><circle class="dot" cx="500" cy="390" r="2.3"/>
+  <path class="w" d="M640,390 H700"/><circle class="dot" cx="640" cy="390" r="2.3"/><circle class="dot" cx="700" cy="390" r="2.3"/>
+  <!-- disp A1 -->
+  <path class="w" d="M210,415 H300"/><circle class="dot" cx="210" cy="415" r="2.3"/><circle class="dot" cx="300" cy="415" r="2.3"/>
+  <path class="w" d="M440,415 H500"/><circle class="dot" cx="440" cy="415" r="2.3"/><circle class="dot" cx="500" cy="415" r="2.3"/>
+  <path class="w" d="M640,415 H700"/><circle class="dot" cx="640" cy="415" r="2.3"/><circle class="dot" cx="700" cy="415" r="2.3"/>
+  <!-- disp A2 -->
+  <path class="w" d="M210,440 H300"/><circle class="dot" cx="210" cy="440" r="2.3"/><circle class="dot" cx="300" cy="440" r="2.3"/>
+  <path class="w" d="M440,440 H500"/><circle class="dot" cx="440" cy="440" r="2.3"/><circle class="dot" cx="500" cy="440" r="2.3"/>
+  <path class="w" d="M640,440 H700"/><circle class="dot" cx="640" cy="440" r="2.3"/><circle class="dot" cx="700" cy="440" r="2.3"/>
+
+  <!-- CE1 / D11 -> U2 CE only (stops at U2 left). Does not continue past U2. -->
+  <path class="w" d="M210,480 H300"/>
+  <circle class="dot" cx="210" cy="480" r="2.3"/>
+  <circle class="dot" cx="300" cy="480" r="2.3"/>
+
+  <!-- CE2 / D12: under, up in gap U2|U3. Stays right of D13 trunk so they do not cross. -->
+  <path class="w" d="M210,516 H250"/>
+  <circle class="dot" cx="210" cy="516" r="2.3"/>
+  <path class="w" d="M250,516 V640"/>
+  <path class="w" d="M250,640 H470"/>
+  <path class="w" d="M470,640 V480"/>
+  <path class="w" d="M470,480 H500"/>
+  <circle class="dot" cx="500" cy="480" r="2.3"/>
+
+  <!-- CE3 / D13: drop LEFT of D12, deeper under, then to gap U3|U4 (no cross of D12) -->
+  <path class="w" d="M210,552 H230"/>
+  <circle class="dot" cx="210" cy="552" r="2.3"/>
+  <path class="w" d="M230,552 V680"/>
+  <path class="w" d="M230,680 H670"/>
+  <path class="w" d="M670,680 V480"/>
+  <path class="w" d="M670,480 H700"/>
+  <circle class="dot" cx="700" cy="480" r="2.3"/>
+
+  <!-- VCC: rail to TOP edge of each package only -->
+  <path class="w" d="M370,60 V175"/><circle class="dot" cx="370" cy="60" r="2.5"/><circle class="dot" cx="370" cy="175" r="2.5"/>
+  <path class="w" d="M570,60 V175"/><circle class="dot" cx="570" cy="60" r="2.5"/><circle class="dot" cx="570" cy="175" r="2.5"/>
+  <path class="w" d="M770,60 V175"/><circle class="dot" cx="770" cy="60" r="2.5"/><circle class="dot" cx="770" cy="175" r="2.5"/>
+
+  <!-- GND: BOTTOM edge of each package to GND rail (30px below U1 bottom style spacing) -->
+  <path class="w" d="M370,625 V760"/><circle class="dot" cx="370" cy="625" r="2.5"/><circle class="dot" cx="370" cy="760" r="2.5"/>
+  <path class="w" d="M570,625 V760"/><circle class="dot" cx="570" cy="625" r="2.5"/><circle class="dot" cx="570" cy="760" r="2.5"/>
+  <path class="w" d="M770,625 V760"/><circle class="dot" cx="770" cy="625" r="2.5"/><circle class="dot" cx="770" cy="760" r="2.5"/>
+
+  <!-- R1 pot rotated 90 CW -->
+  <g transform="translate(980,300) rotate(90)">
+    <use href="#pot"/>
+  </g>
+  <text x="980" y="270" text-anchor="middle" class="tr">R1</text>
+  <text x="980" y="400" text-anchor="middle" class="tn">10 kOhm pot</text>
+  <text x="1008" y="295" class="tn">CW</text>
+  <text x="1008" y="365" class="tn">CCW</text>
+  <text x="918" y="334" class="tn">wiper</text>
+
+  <!-- CW (+5V): from rail end, isolated vertical -->
+  <path class="w" d="M860,60 H980"/>
+  <circle class="dot" cx="860" cy="60" r="2.5"/>
+  <path class="w" d="M980,60 V300"/>
+  <circle class="dot" cx="980" cy="300" r="2.5"/>
+
+  <!-- CCW (GND) -->
+  <path class="w" d="M860,760 H980"/>
+  <circle class="dot" cx="860" cy="760" r="2.5"/>
+  <path class="w" d="M980,760 V360"/>
+  <circle class="dot" cx="980" cy="360" r="2.5"/>
+
+  <!-- A0 to wiper: leave U1 level (no step down), stay left of pot, short jog into wiper -->
+  <path class="w" d="M210,700 H900"/>
+  <circle class="dot" cx="210" cy="700" r="2.3"/>
+  <path class="w" d="M900,700 V330"/>
+  <path class="w" d="M900,330 H960"/>
+  <circle class="dot" cx="960" cy="330" r="2.5"/>
+  <text x="700" y="692" class="tn">A0 to R1 wiper</text>
+
+  <!-- Legend under GND -->
+  <rect class="ic" x="180" y="790" width="540" height="90" rx="3"/>
+  <text x="450" y="814" text-anchor="middle" class="t">Symbol legend (US / ANSI-IEEE)</text>
+  <g transform="translate(220,840) scale(0.55) rotate(90)"><use href="#pot"/></g>
+  <text x="250" y="860" class="tn">pot (90 CW)</text>
+  <g transform="translate(380,840) scale(0.85)"><use href="#gnd"/></g>
+  <text x="400" y="860" class="tn">GND</text>
+  <g transform="translate(500,845) scale(0.85)"><use href="#vplus"/></g>
+  <text x="520" y="860" class="tn">+5V</text>
+  <circle class="dot" cx="620" cy="848" r="2.8"/>
+  <text x="634" y="852" class="tn">junction</text>
+</svg>
