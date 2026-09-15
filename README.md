@@ -1,6 +1,9 @@
 ﻿# 3_bank_display_test
 
 [![Compile](https://github.com/K9DTV/3_bank_display_test/actions/workflows/compile.yml/badge.svg)](https://github.com/K9DTV/3_bank_display_test/actions/workflows/compile.yml)
+[![Release](https://img.shields.io/github/v/release/K9DTV/3_bank_display_test)](https://github.com/K9DTV/3_bank_display_test/releases/latest)
+
+**Status:** Final release **v1.0.0** — project closed out.
 
 **Project page:** https://k9dtv.com/project-3-bank-display.html
 
