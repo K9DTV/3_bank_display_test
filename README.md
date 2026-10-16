@@ -1,17 +1,23 @@
 ﻿# 3_bank_display_test
 
 [![Compile](https://github.com/K9DTV/3_bank_display_test/actions/workflows/compile.yml/badge.svg)](https://github.com/K9DTV/3_bank_display_test/actions/workflows/compile.yml)
-[![Release](https://img.shields.io/github/v/release/K9DTV/3_bank_display_test)](https://github.com/K9DTV/3_bank_display_test/releases/latest)
+[![Release](https://img.shields.io/github/v/release/K9DTV/3_bank_display_test?label=release)](https://github.com/K9DTV/3_bank_display_test/releases/latest)
+[![Status](https://img.shields.io/badge/status-final%20v1.0.0-lightgrey)](https://github.com/K9DTV/3_bank_display_test/releases/tag/v1.0.0)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Arduino%20Pro%20Mini-red)](https://k9dtv.com/project-3-bank-display.html)
+[![Display](https://img.shields.io/badge/display-3x%20PDSP1880-orange)](https://k9dtv.com/project-3-bank-display.html)
+[![Website](https://img.shields.io/badge/k9dtv.com-project%20page-0a7ea4)](https://k9dtv.com/project-3-bank-display.html)
 
-**Status:** Final release **v1.0.0** — project closed out.
+**Status:** Final release **v1.0.0** -- original 2013 sketch, closed out.
 
-**Project page:** https://k9dtv.com/project-3-bank-display.html
+**Project page:** https://k9dtv.com/project-3-bank-display.html  
+**Sister project (structured rewrite):** [new_3_bank_display_test](https://github.com/K9DTV/new_3_bank_display_test) -- same hardware and scroll behavior; clearer code and a fixed 20..500 ms pot delay range.
 
-![Breadboard prototype — three PDSP1880 displays, MCU, scroll pot](docs/3-bank-display.jpg)
+![Breadboard prototype -- three PDSP1880 displays, MCU, scroll pot](docs/3-bank-display.jpg)
 
 *Breadboard prototype: three PDSP1880 LED character displays, MCU on the right, multi-turn pot for scroll speed.*
 
-Sketch file: `Three_bank_display_test` — written by Jim Burney, 07/08/2013.
+Sketch file: `Three_bank_display_test` -- written by Jim Burney, 07/08/2013.
 
 ## Overview
 
